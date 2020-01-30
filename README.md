@@ -11,7 +11,8 @@ the newer [WinDbg Preview](https://docs.microsoft.com/en-us/windows-hardware/dri
 
 ## Downloads
 
-- Head to the [Releases](/releases/latest) tab of this repository for downloads.
+- **Head to the [Releases](https://github.com/Calinou/godot-debug-builds/releases)
+  tab of this repository for downloads.**
 
 ## Usage
 
