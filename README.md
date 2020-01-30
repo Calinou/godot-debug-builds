@@ -16,8 +16,18 @@ the newer [WinDbg Preview](https://docs.microsoft.com/en-us/windows-hardware/dri
 
 ## Usage
 
+### Windows
+
 - Download a debug build and extract the ZIP archive.
   - Make sure the PDB file is next to the executable at all times! The PDB file
     must also have the same name as the executable to work.
 - Start the debug build. You can either start it from a debugger, or attach a
   debugger at runtime (if you use Visual Studio for debugging).
+
+### Linux
+
+- Download a debug build and extract the ZIP archive.
+- Start the debug build from a terminal. You should get a backtrace in
+  the terminal when it crashes.
+  - You can also use `gdb` or `lldb` from the command line to run Godot and
+    get a backtrace using `bt full`.
