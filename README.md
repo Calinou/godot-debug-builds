@@ -9,6 +9,8 @@ Windows binaries were compiled with Visual Studio Community 2019 (version 16.4.3
 You can use Visual Studio or WinDbg to get backtraces. If you're on Windows 10, you may want to use
 the newer [WinDbg Preview](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools).
 
+Linux binaries were compiled on Ubuntu 16.04 with GCC 5.4.
+
 ## Downloads
 
 - **Head to the [Releases](https://github.com/Calinou/godot-debug-builds/releases)
