@@ -16,6 +16,14 @@ Replace `3.2.3-stable` with the desired Git tag.
 git clone --branch="3.2.3-stable" --depth=1 https://github.com/godotengine/godot.git "C:\godot" && cd "C:\godot" && scons -j%NUMBER_OF_PROCESSORS% progress=no && scons -j%NUMBER_OF_PROCESSORS% progress=no tools=no target=release_debug && scons -j%NUMBER_OF_PROCESSORS% progress=no tools=no target=release
 ```
 
+To compress all binaries in efficient (but compatible) ZIP archives, install
+`parallel` from your distribution's package manager then run the following
+command in the resulting `bin/` folder:
+
+```bash
+parallel 7z a -mx9 {}.zip {.}.exe {.}.pdb ::: *.exe
+```
+
 ## Linux
 
 - Install Docker or Podman.
@@ -29,3 +37,11 @@ apt update -qq && apt install -yqq git build-essential scons pkg-config libx11-d
 - Once the build is completed, leave the container open. Open a second terminal and run `docker cp <name>:/opt/godot/bin .` where `<name>` is the name of the container.
   - Use `docker container ls` to find out the container's name.
   - The binaries will be placed in a `bin/` folder in your current working directory.
+
+To compress all binaries in efficient (but compatible) ZIP archives, install
+`parallel` from your distribution's package manager then run the following
+command in the resulting `bin/` folder:
+
+```bash
+parallel 7z a -mx9 {}.zip {} ::: *
+```
