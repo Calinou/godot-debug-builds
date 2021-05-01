@@ -1,0 +1,4 @@
+# Binaries copied from Docker container
+bin/
+*.exe
+*.64
