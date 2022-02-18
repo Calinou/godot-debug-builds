@@ -5,6 +5,12 @@ information. Most optimizations are disabled to make backtraces more useful.
 You want to use an [optimized build](https://godotengine.org/download/) for
 production, as it'll feel significantly snappier.
 
+Those binaries can also be used to
+[profile the engine execution](https://docs.godotengine.org/en/stable/development/cpp/using_cpp_profilers.html)
+and see where performance bottlenecks (in debug mode) come from. Note that in release
+binaries, the bottlenecks may not be exactly the same as release binaries have
+more optimizations enabled.
+
 Windows binaries were compiled with Visual Studio Community 2019 (version
 16.4.3). In addition to Godot's built-in crash handler, you can use Visual
 Studio or WinDbg to get backtraces. If you're on Windows 10, you may want to use
