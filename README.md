@@ -17,7 +17,8 @@ Studio or WinDbg to get backtraces. If you're on Windows 10, you may want to use
 the newer
 [WinDbg Preview](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools).
 
-For Godot 3.3 and later, Linux binaries were compiled on Ubuntu 18.04 with GCC 7.5.
+For Godot 3.5 and later, Linux binaries were compiled on Ubuntu 20.04 with GCC 9.3.
+For Godot 3.4.5 and older, Linux binaries were compiled on Ubuntu 18.04 with GCC 7.5.
 For Godot 3.2.3 and older, Linux binaries were compiled on Ubuntu 16.04 with GCC 5.4.
 
 See [BUILD.md](BUILD.md) if you want to compile your own debug builds easily.

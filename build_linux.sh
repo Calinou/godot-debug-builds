@@ -6,7 +6,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 # See `Dockerfile` for the dependency installation.
 docker build -t godot-debug-builder .
 docker run --rm --volume "$PWD/bin/linux":/opt/artifacts godot-debug-builder sh -c '
-git clone --branch="3.4.5-stable" --depth=1 https://github.com/godotengine/godot.git /opt/godot/
+git clone --branch="3.5-stable" --depth=1 https://github.com/godotengine/godot.git /opt/godot/
 cd /opt/godot/
 scons platform=x11 -j$(nproc) debug_symbols=yes progress=no
 scons platform=x11 -j$(nproc) debug_symbols=yes progress=no tools=no
