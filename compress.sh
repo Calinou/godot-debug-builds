@@ -9,12 +9,12 @@ GODOT_VERSION="3.5"
 
 parallel 7z a -mx9 "{}.zip" "{}" ::: bin/linux/*.64
 
-mv bin/linux/{godot.x11.tools.64.zip,godot-$GODOT_VERSION-editor-debug-linux-gcc7.5.zip}
-mv bin/linux/{godot.x11.debug.64.zip,godot-$GODOT_VERSION-debug-template-linux-gcc7.5.zip}
-mv bin/linux/{godot.x11.opt.64.zip,godot-$GODOT_VERSION-release-template-linux-gcc7.5.zip}
-mv bin/linux/{godot_server.x11.tools.64.zip,godot-server-$GODOT_VERSION-editor-debug-linux-gcc7.5.zip}
-mv bin/linux/{godot_server.x11.debug.64.zip,godot-server-$GODOT_VERSION-debug-template-linux-gcc7.5.zip}
-mv bin/linux/{godot_server.x11.opt.64.zip,godot-server-$GODOT_VERSION-release-template-linux-gcc7.5.zip}
+mv bin/linux/{godot.x11.tools.64.zip,godot-$GODOT_VERSION-editor-debug-linux-gcc9.3.zip}
+mv bin/linux/{godot.x11.debug.64.zip,godot-$GODOT_VERSION-debug-template-linux-gcc9.3.zip}
+mv bin/linux/{godot.x11.opt.64.zip,godot-$GODOT_VERSION-release-template-linux-gcc9.3.zip}
+mv bin/linux/{godot_server.x11.tools.64.zip,godot-server-$GODOT_VERSION-editor-debug-linux-gcc9.3.zip}
+mv bin/linux/{godot_server.x11.debug.64.zip,godot-server-$GODOT_VERSION-debug-template-linux-gcc9.3.zip}
+mv bin/linux/{godot_server.x11.opt.64.zip,godot-server-$GODOT_VERSION-release-template-linux-gcc9.3.zip}
 
 rm bin/linux/*.64
 
