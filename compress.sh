@@ -5,7 +5,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # This script should be run after running both `build_linux.sh` and `build_windows.bat`.
 
-GODOT_VERSION="3.5"
+GODOT_VERSION="3.5.1"
 
 parallel 7z a -mx9 "{}.zip" "{}" ::: bin/linux/*.64
 
