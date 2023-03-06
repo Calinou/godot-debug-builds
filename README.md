@@ -11,17 +11,27 @@ and see where performance bottlenecks (in debug mode) come from. Note that in re
 binaries, the bottlenecks may not be exactly the same as release binaries have
 more optimizations enabled.
 
-Windows binaries were compiled with Visual Studio Community 2019 (version
-16.4.3). In addition to Godot's built-in crash handler, you can use Visual
-Studio or WinDbg to get backtraces. If you're on Windows 10, you may want to use
-the newer
-[WinDbg Preview](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools).
-
-For Godot 3.5 and later, Linux binaries were compiled on Ubuntu 20.04 with GCC 9.3.
-For Godot 3.4.5 and older, Linux binaries were compiled on Ubuntu 18.04 with GCC 7.5.
-For Godot 3.2.3 and older, Linux binaries were compiled on Ubuntu 16.04 with GCC 5.4.
+Windows binaries were compiled with Visual Studio Community. In addition to
+Godot's built-in crash handler, you can use Visual Studio or WinDbg to get
+backtraces. If you're on Windows 10, you may want to use the newer [WinDbg
+Preview](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools).
 
 See [BUILD.md](BUILD.md) if you want to compile your own debug builds easily.
+
+<details>
+<summary>Compiler versions used</summary>
+
+### Windows
+
+- For Godot 4.0 and later, Windows binaries were compiled on Windows 11 with Visual Studio 2022.
+- For Godot 3.5.1 and older, Windows binaries were compiled on Windows 10 with Visual Studio 2019.
+
+### Linux
+
+- For Godot 3.5 and later, Linux binaries were compiled on Ubuntu 20.04 with GCC 9.3.
+- For Godot 3.4.5 and older, Linux binaries were compiled on Ubuntu 18.04 with GCC 7.5.
+- For Godot 3.2.3 and older, Linux binaries were compiled on Ubuntu 16.04 with GCC 5.4.
+</details>
 
 ## Downloads
 

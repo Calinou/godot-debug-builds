@@ -5,15 +5,13 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # See `Dockerfile` for the dependency installation.
 docker build -t godot-debug-builder .
-docker run --rm --volume "$PWD/bin/linux":/opt/artifacts godot-debug-builder sh -c '
-git clone --branch="3.5.1-stable" --depth=1 https://github.com/godotengine/godot.git /opt/godot/
+# `:z` suffix to volume path is required to fix permissions on host systems with SELinux enabled.
+docker run --rm --volume "$PWD/bin/linux":/opt/artifacts:z godot-debug-builder sh -c '
+git clone --branch="4.0-stable" --depth=1 https://github.com/godotengine/godot.git /opt/godot/
 cd /opt/godot/
-scons platform=x11 -j$(nproc) debug_symbols=yes progress=no
-scons platform=x11 -j$(nproc) debug_symbols=yes progress=no tools=no
-scons platform=x11 -j$(nproc) debug_symbols=yes progress=no tools=no target=release
-scons platform=server -j$(nproc) debug_symbols=yes progress=no
-scons platform=server -j$(nproc) debug_symbols=yes progress=no tools=no
-scons platform=server -j$(nproc) debug_symbols=yes progress=no tools=no target=release
+scons platform=linuxbsd debug_symbols=yes progress=no optimize=speed_trace target=editor
+scons platform=linuxbsd debug_symbols=yes progress=no optimize=speed_trace target=template_debug
+scons platform=linuxbsd debug_symbols=yes progress=no optimize=speed_trace target=template_release
 mv bin/* /opt/artifacts/
 ls -l /opt/artifacts/
 '
