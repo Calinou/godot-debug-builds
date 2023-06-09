@@ -2,7 +2,7 @@
 
 ## Windows
 
-- Install Visual Studio 2019.
+- Install Visual Studio 2022.
 - Run `build_windows.bat` by double-clicking it.
 
 ## Linux

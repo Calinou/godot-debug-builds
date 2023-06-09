@@ -3,7 +3,7 @@
 :: Clean up old build directly in case the previous build was aborted.
 rmdir /s /q %TEMP%\godot-debug-build-template-debug
 
-git clone --branch="4.0-stable" --depth=1 https://github.com/godotengine/godot.git %TEMP%\godot-debug-build-template-debug
+git clone --branch="4.0.1-stable" --depth=1 https://github.com/godotengine/godot.git %TEMP%\godot-debug-build-template-debug
 pushd %TEMP%\godot-debug-build-template-debug
 scons debug_symbols=yes progress=no optimize=speed_trace target=template_debug
 popd
