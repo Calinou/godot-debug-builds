@@ -8,7 +8,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 GODOT_VERSION="4.0.3"
 
 # Run this `parallel` command in parallel with the one below.
-parallel 7z a -mx9 "{}.zip" "{}" ::: bin/linux/*.x86_64 &
+parallel 7z a -mx9 "{}.zip" "{}" ::: {bin/linux/*.x86_64,bin/macos/*.app}
 
 # Each ZIP should contain both console and non-console executables, as the console executable
 # depends on the non-console executable's presence to work.
@@ -19,6 +19,11 @@ mv bin/linux/{godot.linuxbsd.template_debug.x86_64.zip,godot-$GODOT_VERSION-debu
 mv bin/linux/{godot.linuxbsd.template_release.x86_64.zip,godot-$GODOT_VERSION-release-template-linux-gcc9.3.zip}
 
 rm bin/linux/*.x86_64
+
+mv bin/macos/{"Godot Debug.app.zip",godot-$GODOT_VERSION-editor-debug-macos-universal.zip}
+mv bin/macos/{"macos_template.app.zip",godot-$GODOT_VERSION-templates-macos-universal.zip}
+
+rm -rf bin/macos/*.app
 
 mv bin/windows/{godot.windows.editor.x86_64.zip,godot-$GODOT_VERSION-editor-debug-windows-msvc2022.zip}
 mv bin/windows/{godot.windows.template_debug.x86_64.zip,godot-$GODOT_VERSION-debug-template-windows-msvc2022.zip}

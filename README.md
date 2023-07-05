@@ -31,6 +31,10 @@ See [BUILD.md](BUILD.md) if you want to compile your own debug builds easily.
 - For Godot 3.5 and later, Linux binaries were compiled on Ubuntu 20.04 with GCC 9.3.
 - For Godot 3.4.5 and older, Linux binaries were compiled on Ubuntu 18.04 with GCC 7.5.
 - For Godot 3.2.3 and older, Linux binaries were compiled on Ubuntu 16.04 with GCC 5.4.
+
+### macOS
+
+- For Godot 4.0.3 and later, Xcode 14.3 is used.
 </details>
 
 ## Downloads
@@ -55,3 +59,12 @@ See [BUILD.md](BUILD.md) if you want to compile your own debug builds easily.
   the terminal when it crashes.
   - You can also use `gdb` or `lldb` from the command line to run Godot and
     get a backtrace using `bt full`.
+
+### macOS
+
+- Follow instructions in
+  [Running Godot apps on macOS](https://docs.godotengine.org/en/latest/tutorials/export/running_on_macos.html#app-is-signed-including-ad-hoc-signatures-but-not-notarized),
+  as the editor isn't notarized.
+- To run the editor from a terminal, `cd` to the folder containing the `.app` bundle
+  then run `"Godot Debug.app/Contents/MacOS/Godot"` (with quotes).
+  This will allow you to see the crash handler's output when the editor crashes.
