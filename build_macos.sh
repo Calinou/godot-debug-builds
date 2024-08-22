@@ -4,7 +4,7 @@ IFS=$'\n\t'
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 rm -rf /tmp/godot
-git clone --branch="4.2.2-stable" --depth=1 https://github.com/godotengine/godot.git /tmp/godot
+git clone --branch="4.3-stable" --depth=1 https://github.com/godotengine/godot.git /tmp/godot
 
 pushd /tmp/godot
 
