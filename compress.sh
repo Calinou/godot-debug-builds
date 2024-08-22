@@ -5,7 +5,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # This script should be run after running both `build_linux.sh` and `build_windows.bat`.
 
-GODOT_VERSION="4.1"
+GODOT_VERSION="4.2.2"
 
 # Run this `parallel` command in parallel with the one below.
 parallel 7z a -mx9 "{}.zip" "{}" ::: {bin/linux/*.x86_64,bin/macos/*.app}
