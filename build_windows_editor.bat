@@ -3,7 +3,7 @@
 :: Clean up old build directly in case the previous build was aborted.
 rmdir /s /q %TEMP%\godot-debug-build-editor
 
-git clone --branch="4.3-stable" --depth=1 https://github.com/godotengine/godot.git %TEMP%\godot-debug-build-editor
+git clone --branch="4.4-stable" --depth=1 https://github.com/godotengine/godot.git %TEMP%\godot-debug-build-editor
 pushd %TEMP%\godot-debug-build-editor
 scons debug_symbols=yes progress=no optimize=speed_trace target=editor
 popd
